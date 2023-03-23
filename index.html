@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bom coração</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Bom coração</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNavDarkDropdown" aria-controls="navbarNavDarkDropdown" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+    </nav>
+
+    <main>
+        <section class="container mt-5">
+            <h1 class="text-center">Pacientes</h1>
+            <table class="table">
+                <thead>
+                  <tr>
+                    
+                    <th scope="col">Paciente</th>
+                    <th scope="col">Data</th>
+                    <th scope="col">Horário</th>
+                    <th scope="col">Médico</th>
+                  </tr>
+                </thead>
+                <tbody id="table-paciente">
+
+                  <tr class="paciente" id="cliente">
+                    
+                    <td class="info-nome">Marco</td>
+                    <td class="info-data" >12/03</td>
+                    <td class="info-horario">13:30</td>
+                    <td class="info-medico">Rodrigo</td>
+                  </tr>
+
+                  <tr class="paciente" id="cliente">
+                    
+                    <td class="info-nome">Eliza</td>
+                    <td class="info-data">13/03</td>
+                    <td class="info-horario">16:00</td>
+                    <td class="info-medico">Eduardo</td>
+                  </tr>
+
+                  <tr class="paciente" id="cliente">
+            
+                    <td class="info-nome">Luiza</td>
+                    <td class="info-data">14/03</td>
+                    <td class="info-horario">11:30</td>
+                    <td class="info-medico">Maria</td>
+                  </tr>
+
+                </tbody>
+              </table>
+
+        </section>
+    </main>
+
+    <div class="row">
+        <h3 class="col-md-3">Total de pacientes:</h3>
+        <strong class="col-md-9 fs-4 qtdCliente">0</strong>
+    </div>
+
+    <section class="container">
+        <h2 class="text-center">Adicionar novo paciente</h2>
+        <ul id="erro-mensagem"></ul>
+        <form id="form-add">
+            <div class="grupo">
+                <label for="nome" class="form-label">Nome</label>
+                <input id="nome" name="nome" type="text" placeholder="Digite o nome do paciente" class="form-control">
+            </div>
+            <div class="grupo">
+                <label for="data" class="form-label" >Data</label>
+                <input type="date" id="data" name="data" class="form-control">
+            </div>
+            <div class="grupo">
+                <label for="horario" class="form-label">Horário</label>
+                <input type="time" id="horario" name="horario" min="06:00" max="22:00" class="form-control" required>
+            </div>
+            <div class="grupo" >
+                <label for="medico" class="form-label">Médico</label>
+                <input id="medico" name="medico" type="text" placeholder="Digite o nome do medico" class="form-control">
+            </div>
+            <button id="add-paciente" class="btn btn-principal mt-3">Adicionar</button>
+        </form>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+
+        <script src="js/form.js"></script>
+        <script src="js/validacoes.js"></script>
+        <script src="js/remover.js"></script>
+        <script src="js/conta.js"></script>
+</body>
+
+</html>
